@@ -38,10 +38,11 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="carrinho : ${carrinho">
+						<tr th:each="carrinho : ${carrinho}">
 							<th scope="row" th:text="${carrinho.id}"></th>
 							<td>
-								<a th:text="${usario.carrinho}" th:href="@{/carrinho/{idCarrinho} (id=${carrinho.id})}"></a>
+								<a th:text="${usario.carrinho}"
+									th:href="@{/carrinho/{idCarrinho} (id=${carrinho.id})}"></a>
 							</td>
 
 

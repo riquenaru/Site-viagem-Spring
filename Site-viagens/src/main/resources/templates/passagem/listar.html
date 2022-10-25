@@ -9,20 +9,20 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-	<title>Listagem de Login</title>
+	<title>Listagem de Passagens</title>
 </head>
 
 <body>
 	<nav class="navbar navbar-light bg-light">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/login">Login</a>
+			<a class="navbar-brand" href="/passagem">Passagem</a>
 		</div>
 	</nav>
 
 	<main class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h1>Listagem de Login</h1>
+				<h1>Listagem de Passagem</h1>
 			</div>
 		</div>
 
@@ -32,24 +32,24 @@
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">Tipo Login</th>
+							<th scope="col">Tipo Passagem</th>
 
-							<th scope="col">Ações</th>
+							<th scope="col">Info</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="login : ${login}">
-							<th scope="row" th:text="${login.id}"></th>
+						<tr th:each="passagem : ${passagens}">
+							<th scope="row" th:text="${passagem.id}"></th>
 							<td>
-								<a th:text="${cliente.tipo_login}" th:href="@{/login/{id} (id=${login.id})}"></a>
+								<a th:text="${passagem.}" th:href="@{/passagem/{idPassagem} (id=${passagem.id})}"></a>
 							</td>
 
 
-							<a th:href="@{/login/{id}/editar (id=${login.id})}" class="btn btn-warning">
+							<a th:href="@{/passagem/{idPassagem}/editar (id=${passagem.id})}" class="btn btn-warning">
 								Editar
 							</a>
-							<a th:href="@{/login/{id}/excluir (id=${login.id})}" class="btn btn-danger"
-								onclick="return confirm('Tem certeza que deseja excluir esse login?');">
+							<a th:href="@{/passagem/{idPassagem}/excluir (id=${passagem.id})}" class="btn btn-danger"
+								onclick="return confirm('Tem certeza que deseja excluir esse passagem?');">
 								Excluir
 							</a>
 							</td>
@@ -61,7 +61,7 @@
 
 		<div class="row">
 			<div class="col-sm-12">
-				<a th:href="@{/login/cadastrar}" class="btn btn-primary">Cadastrar novo Login</a>
+				<a th:href="@{/passagem/cadastrar}" class="btn btn-primary">Cadastrar Passagem</a>
 			</div>
 		</div>
 	</main>

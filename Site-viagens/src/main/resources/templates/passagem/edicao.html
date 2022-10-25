@@ -19,25 +19,25 @@
 <body>
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Login</a>
+      <a class="navbar-brand" href="#">Passagem</a>
     </div>
   </nav>
 
   <main class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h1>Editar Login</h1>
+        <h1>Editar Passagem</h1>
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-12">
-       <form method="POST" th:object="${login}" enctype="multipart/form-data">
-          <input type="hidden" th:field="*{id_login}">
+       <form method="POST" th:object="${passagem}" enctype="multipart/form-data">
+          <input type="hidden" th:field="*{idPassagem}">
 
           <div class="mb-3">
             <label for="tipo" class="form-label">Tipo</label>
-            <input type="text" class="form-control" id="tipo" th:field="*{tipo}">
+            <input type="text" class="form-control" id="tipo" th:field="*{}">
           </div>
          <br>
           <button type="submit" class="btn btn-primary">Salvar</button>

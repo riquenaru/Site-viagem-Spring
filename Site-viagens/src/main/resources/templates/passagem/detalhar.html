@@ -7,7 +7,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-  <title>Detalhes do Cliente</title>
+  <title>Detalhes da Passagem</title>
 
 <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
@@ -19,23 +19,23 @@
 <body>
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Login</a>
+      <a class="navbar-brand" href="#">Passagem</a>
     </div>
   </nav>
 
   <main class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h1>Detalhes do Login</h1>
+        <h1>Detalhes da Passagem</h1>
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-12">
         <div class="card">
-          <h5 class="card-header" th:text="${login.tipo}"></h5>
+          <h5 class="card-header" th:text="${passagem}"></h5>
           <br>
-            <a href="/login" class="btn btn-warning">Voltar</a>
+            <a href="/passagem" class="btn btn-warning">Voltar</a>
             
           </div>
         </div>

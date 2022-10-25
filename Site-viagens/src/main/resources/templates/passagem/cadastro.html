@@ -9,26 +9,26 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-	<title>Cadastrar Login</title>
+	<title>Cadastrar Passagem</title>
 </head>
 
 <body>
 	<nav class="navbar navbar-light bg-light">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Login</a>
+			<a class="navbar-brand" href="#">Passagem</a>
 		</div>
 	</nav>
 
 	<main class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h1>Cadastrar Login</h1>
+				<h1>Cadastrar Passagem</h1>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-sm-12">
-				<form method="POST" th:object="${login}" enctype="multipart/form-data">
+				<form method="POST" th:object="${passagem}" enctype="multipart/form-data">
 					<div class="mb-3">
 						<label for="tipo" class="form-label">Tipo</label>
 						<input type="text" class="form-control" id="tipo" th:field="*{tipo}">
