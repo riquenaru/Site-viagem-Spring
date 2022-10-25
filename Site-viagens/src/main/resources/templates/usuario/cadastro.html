@@ -28,7 +28,7 @@
 
 		<div class="row">
 			<div class="col-sm-12">
-				<form method="POST" th:object="${login}" enctype="multipart/form-data">
+				<form method="POST" th:object="${usuario}" enctype="multipart/form-data">
 					<div class="mb-3">
 						<label for="tipo" class="form-label">Tipo</label>
 						<input type="text" class="form-control" id="tipo" th:field="*{tipo}">

@@ -9,20 +9,20 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-	<title>Listagem de Login</title>
+	<title>Lista de usuario</title>
 </head>
 
 <body>
 	<nav class="navbar navbar-light bg-light">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/login">Login</a>
+			<a class="navbar-brand" href="/usuario">Login</a>
 		</div>
 	</nav>
 
 	<main class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<h1>Listagem de Login</h1>
+				<h1>Lista de usuarios</h1>
 			</div>
 		</div>
 
@@ -38,17 +38,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="login : ${login}">
-							<th scope="row" th:text="${login.id}"></th>
+						<tr th:each="usuario : ${usuario}">
+							<th scope="row" th:text="${ususario.idUsuario}"></th>
 							<td>
-								<a th:text="${cliente.tipo_login}" th:href="@{/login/{id} (id=${login.id})}"></a>
+								<a th:text="${usuario.tipo_login}" th:href="@{/usuario/{idUsuario} (id=${usuario.uduario})}"></a>
 							</td>
 
 
-							<a th:href="@{/login/{id}/editar (id=${login.id})}" class="btn btn-warning">
+							<a th:href="@{/usuario/{idUsuario}/editar (id=${usuario.idUsuario})}" class="btn btn-warning">
 								Editar
 							</a>
-							<a th:href="@{/login/{id}/excluir (id=${login.id})}" class="btn btn-danger"
+							<a th:href="@{/login/{idUsuario}/excluir (id=${usuario.idUsuario})}" class="btn btn-danger"
 								onclick="return confirm('Tem certeza que deseja excluir esse login?');">
 								Excluir
 							</a>
@@ -61,7 +61,7 @@
 
 		<div class="row">
 			<div class="col-sm-12">
-				<a th:href="@{/login/cadastrar}" class="btn btn-primary">Cadastrar novo Login</a>
+				<a th:href="@{/usuario/cadastrar}" class="btn btn-primary">Cadastrar novo Login</a>
 			</div>
 		</div>
 	</main>
